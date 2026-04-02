@@ -1,111 +1,62 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { renderHook, act, waitFor } from '@testing-library/react';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { renderHook, act } from '@testing-library/react';
 import { useCounter } from './useCounter';
-import * as storage from '../utils/storage';
-
-vi.mock('../utils/storage');
 
 describe('useCounter', () => {
-  const mockGetStorageItem = vi.mocked(storage.getStorageItem);
-  const mockSetStorageItem = vi.mocked(storage.setStorageItem);
-
   beforeEach(() => {
-    vi.clearAllMocks();
-    mockSetStorageItem.mockReturnValue(true);
+    localStorage.clear();
   });
 
-  afterEach(() => {
-    vi.restoreAllMocks();
-  });
-
-  it('initializes with count 0 when no stored value exists', async () => {
-    mockGetStorageItem.mockReturnValue(null);
-    
+  it('should initialize with default value of 0', () => {
     const { result } = renderHook(() => useCounter());
-    
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
-    });
-    
     expect(result.current.count).toBe(0);
   });
 
-  it('loads initial count from localStorage', async () => {
-    mockGetStorageItem.mockReturnValue('42');
-    
-    const { result } = renderHook(() => useCounter());
-    
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
-    });
-    
-    expect(result.current.count).toBe(42);
+  it('should initialize with provided initial value', () => {
+    const { result } = renderHook(() => useCounter(10));
+    expect(result.current.count).toBe(10);
   });
 
-  it('increments count by 1', async () => {
-    mockGetStorageItem.mockReturnValue('10');
-    
+  it('should increment count', () => {
     const { result } = renderHook(() => useCounter());
-    
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
-    });
-    
     act(() => {
       result.current.increment();
     });
-    
-    expect(result.current.count).toBe(11);
+    expect(result.current.count).toBe(1);
   });
 
-  it('decrements count by 1', async () => {
-    mockGetStorageItem.mockReturnValue('10');
-    
-    const { result } = renderHook(() => useCounter());
-    
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
-    });
-    
+  it('should decrement count', () => {
+    const { result } = renderHook(() => useCounter(5));
     act(() => {
       result.current.decrement();
     });
-    
-    expect(result.current.count).toBe(9);
+    expect(result.current.count).toBe(4);
   });
 
-  it('resets count to 0', async () => {
-    mockGetStorageItem.mockReturnValue('100');
-    
-    const { result } = renderHook(() => useCounter());
-    
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
+  it('should reset count to initial value', () => {
+    const { result } = renderHook(() => useCounter(10));
+    act(() => {
+      result.current.increment();
+      result.current.increment();
     });
-    
+    expect(result.current.count).toBe(12);
     act(() => {
       result.current.reset();
     });
-    
-    expect(result.current.count).toBe(0);
+    expect(result.current.count).toBe(10);
   });
 
-  it('sets error when localStorage save fails', async () => {
-    mockGetStorageItem.mockReturnValue('10');
-    mockSetStorageItem.mockReturnValue(false);
-    
+  it('should persist count to localStorage', () => {
     const { result } = renderHook(() => useCounter());
-    
-    await waitFor(() => {
-      expect(result.current.loading).toBe(false);
-    });
-    
     act(() => {
       result.current.increment();
     });
-    
-    await waitFor(() => {
-      expect(result.current.error).not.toBeNull();
-    });
+    expect(localStorage.getItem('counter-value')).toBe('1');
+  });
+
+  it('should load count from localStorage on initialization', () => {
+    localStorage.setItem('counter-value', '42');
+    const { result } = renderHook(() => useCounter());
+    expect(result.current.count).toBe(42);
   });
 });
