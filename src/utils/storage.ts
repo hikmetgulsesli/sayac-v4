@@ -7,6 +7,7 @@ export function getStorageItem(key: string): string | null {
   try {
     return localStorage.getItem(key);
   } catch {
+    // Handle SecurityError, QuotaExceededError, DOMException, etc.
     return null;
   }
 }
@@ -16,6 +17,7 @@ export function setStorageItem(key: string, value: string): boolean {
     localStorage.setItem(key, value);
     return true;
   } catch {
+    // Handle SecurityError, QuotaExceededError, DOMException, etc.
     return false;
   }
 }

@@ -1,62 +1,102 @@
-import { describe, it, expect, beforeEach } from 'vitest';
-import { renderHook, act } from '@testing-library/react';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { renderHook, waitFor } from '@testing-library/react';
+import { act } from 'react';
 import { useCounter } from './useCounter';
 
-describe('useCounter', () => {
+describe('useCounter hook', () => {
   beforeEach(() => {
     localStorage.clear();
+    vi.restoreAllMocks();
   });
 
-  it('should initialize with default value of 0', () => {
+  it('increments count by 1', async () => {
     const { result } = renderHook(() => useCounter());
-    expect(result.current.count).toBe(0);
-  });
+    await waitFor(() => expect(result.current.loading).toBe(false));
 
-  it('should initialize with provided initial value', () => {
-    const { result } = renderHook(() => useCounter(10));
-    expect(result.current.count).toBe(10);
-  });
-
-  it('should increment count', () => {
-    const { result } = renderHook(() => useCounter());
     act(() => {
       result.current.increment();
     });
+
     expect(result.current.count).toBe(1);
   });
 
-  it('should decrement count', () => {
-    const { result } = renderHook(() => useCounter(5));
+  it('decrements count by 1', async () => {
+    const { result } = renderHook(() => useCounter());
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
     act(() => {
       result.current.decrement();
     });
-    expect(result.current.count).toBe(4);
+
+    expect(result.current.count).toBe(-1);
   });
 
-  it('should reset count to initial value', () => {
-    const { result } = renderHook(() => useCounter(10));
+  it('resets count to 0', async () => {
+    const { result } = renderHook(() => useCounter());
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
     act(() => {
       result.current.increment();
       result.current.increment();
     });
-    expect(result.current.count).toBe(12);
+    expect(result.current.count).toBe(2);
+
     act(() => {
       result.current.reset();
     });
-    expect(result.current.count).toBe(10);
+    expect(result.current.count).toBe(0);
   });
 
-  it('should persist count to localStorage', () => {
+  it('loads initial value from localStorage', async () => {
+    localStorage.setItem('sayac-v4-count', '42');
     const { result } = renderHook(() => useCounter());
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    expect(result.current.count).toBe(42);
+  });
+
+  it('falls back to 0 when localStorage has invalid value', async () => {
+    localStorage.setItem('sayac-v4-count', 'not-a-number');
+    const { result } = renderHook(() => useCounter());
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    expect(result.current.count).toBe(0);
+  });
+
+  it('falls back to 0 when localStorage throws error on mount', async () => {
+    vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
+      throw new Error('SecurityError');
+    });
+
+    const { result } = renderHook(() => useCounter());
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    expect(result.current.count).toBe(0);
+  });
+
+  it('persists count to localStorage when changed', async () => {
+    const { result } = renderHook(() => useCounter());
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
     act(() => {
       result.current.increment();
     });
-    expect(localStorage.getItem('counter-value')).toBe('1');
+
+    expect(localStorage.getItem('sayac-v4-count')).toBe('1');
   });
 
-  it('should load count from localStorage on initialization', () => {
-    localStorage.setItem('counter-value', '42');
+  it('sets error when localStorage write fails', async () => {
     const { result } = renderHook(() => useCounter());
-    expect(result.current.count).toBe(42);
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      throw new Error('QuotaExceededError');
+    });
+
+    act(() => {
+      result.current.increment();
+    });
+
+    await waitFor(() => expect(result.current.error).toBe('localStorage yazma hatası'));
   });
 });
