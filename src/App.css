@@ -56,8 +56,8 @@
 }
 
 .btn-decrement {
-  background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
-  color: white;
+  background: var(--color-secondary);
+  color: var(--color-on-secondary, white);
 }
 
 .btn-reset {
@@ -67,8 +67,8 @@
 }
 
 .btn-increment {
-  background: linear-gradient(135deg, #4ecdc4, #44a08d);
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-on-primary, white);
 }
 
 @media (max-width: 480px) {
