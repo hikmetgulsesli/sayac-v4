@@ -9,7 +9,7 @@
 }
 
 .title {
-  color: #fff;
+  color: var(--color-on-surface, #fff);
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 2rem;
@@ -20,7 +20,7 @@
 .counter-value {
   font-size: 8rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-on-surface, #fff);
   margin: 2rem 0;
   text-shadow: 0 0 30px rgba(100, 200, 255, 0.5);
   line-height: 1;
@@ -62,7 +62,7 @@
 
 .btn-reset {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: var(--color-on-surface, #fff);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
