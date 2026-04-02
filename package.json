@@ -15,7 +15,12 @@
     "type": "git",
     "url": "git+https://github.com/hikmetgulsesli/sayac-v4.git"
   },
-  "keywords": ["counter", "react", "typescript", "tailwindcss"],
+  "keywords": [
+    "counter",
+    "react",
+    "typescript",
+    "tailwindcss"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,6 +28,9 @@
   },
   "homepage": "https://github.com/hikmetgulsesli/sayac-v4#readme",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@testing-library/dom": "^10.4.1",
+    "autoprefixer": "^10.4.27",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
