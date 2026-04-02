@@ -1,0 +1,954 @@
+{
+  "generatedAt": "2026-04-02T17:11:52.207Z",
+  "screenCount": 4,
+  "screens": {
+    "1581e1ed36e042af95b9f4f0fe79c0ba": {
+      "screenId": "1581e1ed36e042af95b9f4f0fe79c0ba",
+      "sections": [],
+      "buttons": [],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [],
+      "images": [],
+      "cssVars": {},
+      "fonts": [],
+      "layoutHints": {},
+      "tabBar": [],
+      "title": "sayac-v4 Ürün Gereksinim Dokümanı"
+    },
+    "6c20bf6a54b84dcdb16b547a08495a01": {
+      "screenId": "6c20bf6a54b84dcdb16b547a08495a01",
+      "sections": [
+        {
+          "tag": "aside",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-screen",
+            "p-4",
+            "bg-[#070d1f]",
+            "dark:bg-[#070d1f]",
+            "w-64",
+            "border-r",
+            "border-slate-800/50"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "relative",
+            "bg-surface-dim"
+          ],
+          "childCount": 12
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Upgrade to Pro",
+          "classes": [
+            "w-full",
+            "py-2",
+            "px-4",
+            "kinetic-gradient",
+            "text-on-primary",
+            "font-bold",
+            "rounded-lg",
+            "text-sm",
+            "transition-transform",
+            "active:scale-95"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "history",
+          "classes": [
+            "text-slate-400",
+            "hover:text-slate-50",
+            "transition-colors",
+            "duration-200"
+          ],
+          "icon": "history",
+          "action": "click-action"
+        },
+        {
+          "label": "settings",
+          "classes": [
+            "text-slate-400",
+            "hover:text-slate-50",
+            "transition-colors",
+            "duration-200"
+          ],
+          "icon": "settings",
+          "action": "click-action"
+        },
+        {
+          "label": "-1",
+          "classes": [
+            "w-20",
+            "h-20",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded-full",
+            "bg-secondary-container",
+            "text-on-secondary-container",
+            "transition-all",
+            "hover:scale-105",
+            "active:scale-90",
+            "shadow-xl",
+            "shadow-secondary-container/20"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "+1",
+          "classes": [
+            "w-32",
+            "h-32",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded-full",
+            "kinetic-gradient",
+            "text-on-primary",
+            "transition-all",
+            "hover:scale-105",
+            "active:scale-95",
+            "shadow-2xl",
+            "shadow-primary/30"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "Sıfırla",
+          "classes": [
+            "px-8",
+            "py-3",
+            "rounded-full",
+            "bg-transparent",
+            "text-on-tertiary-fixed-variant",
+            "border",
+            "border-outline-variant/30",
+            "opacity-50",
+            "cursor-not-allowed",
+            "font-medium",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "label": "numbers\nCounter",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "bg-emerald-500/10",
+            "text-emerald-400",
+            "rounded-lg",
+            "transition-all",
+            "duration-300"
+          ],
+          "icon": "numbers"
+        },
+        {
+          "label": "bar_chart\nStats",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "hover:bg-slate-800/50",
+            "rounded-lg",
+            "transition-all",
+            "duration-300"
+          ],
+          "icon": "bar_chart"
+        },
+        {
+          "label": "settings\nSettings",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "hover:bg-slate-800/50",
+            "rounded-lg",
+            "transition-all",
+            "duration-300"
+          ],
+          "icon": "settings"
+        },
+        {
+          "label": "keyboard\nKeyboard",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "hover:bg-slate-800/50",
+            "rounded-lg",
+            "transition-all",
+            "duration-300"
+          ],
+          "icon": "keyboard"
+        },
+        {
+          "label": "help\nHelp",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "transition-all"
+          ],
+          "icon": "help"
+        },
+        {
+          "label": "numbers\nSayaç",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-emerald-400"
+          ],
+          "icon": "numbers"
+        },
+        {
+          "label": "bar_chart\nİstatistik",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-on-surface-variant/60"
+          ],
+          "icon": "bar_chart"
+        },
+        {
+          "label": "keyboard\nKlavye",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-on-surface-variant/60"
+          ],
+          "icon": "keyboard"
+        },
+        {
+          "label": "settings\nAyarlar",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-on-surface-variant/60"
+          ],
+          "icon": "settings"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "numbers",
+        "bar_chart",
+        "settings",
+        "keyboard",
+        "help",
+        "history"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSyAL-G0-W6gyDeGzxJjsP684krS9nxZGJhMLrrnzJRYFWmG-3kBhnakIXqVqXsAOUO970T-gg_N3tOKVV8HTQj7YX3KUVYqympxvN_HdxHfyNg4ovdevmFWbb5a0gdMLEyj94tHnttRKgGgBGr1",
+          "alt": "User profile avatar"
+        }
+      ],
+      "cssVars": {},
+      "fonts": [
+        "Inter",
+        "Space Grotesk",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "tabBar": [
+        {
+          "label": "Counter",
+          "icon": "numbers",
+          "active": false
+        },
+        {
+          "label": "Stats",
+          "icon": "bar_chart",
+          "active": false
+        },
+        {
+          "label": "Settings",
+          "icon": "settings",
+          "active": false
+        },
+        {
+          "label": "Keyboard",
+          "icon": "keyboard",
+          "active": false
+        },
+        {
+          "label": "Sayaç",
+          "icon": "numbers",
+          "active": false
+        },
+        {
+          "label": "İstatistik",
+          "icon": "bar_chart",
+          "active": false
+        },
+        {
+          "label": "Klavye",
+          "icon": "keyboard",
+          "active": false
+        },
+        {
+          "label": "Ayarlar",
+          "icon": "settings",
+          "active": false
+        }
+      ],
+      "title": "Boş Durum (0)"
+    },
+    "bf34b4ad00a84c26ab17ea56da9fb29c": {
+      "screenId": "bf34b4ad00a84c26ab17ea56da9fb29c",
+      "sections": [
+        {
+          "tag": "aside",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-screen",
+            "p-4",
+            "bg-[#070d1f]",
+            "dark:bg-[#070d1f]",
+            "w-64",
+            "border-r",
+            "border-slate-800/50"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "relative",
+            "overflow-hidden"
+          ],
+          "childCount": 23
+        },
+        {
+          "tag": "nav",
+          "classes": [
+            "md:hidden",
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full",
+            "bg-[#070d1f]/80",
+            "backdrop-blur-xl",
+            "flex",
+            "justify-around",
+            "items-center"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Upgrade to Pro",
+          "classes": [
+            "w-full",
+            "py-3",
+            "px-4",
+            "bg-primary",
+            "text-on-primary",
+            "font-bold",
+            "rounded-xl",
+            "mb-4",
+            "text-sm",
+            "font-headline",
+            "tracking-tight",
+            "hover:opacity-90",
+            "transition-opacity"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "history",
+          "classes": [
+            "text-slate-400",
+            "hover:text-slate-50",
+            "transition-colors",
+            "duration-150",
+            "active:scale-95"
+          ],
+          "icon": "history",
+          "action": "click-action"
+        },
+        {
+          "label": "settings",
+          "classes": [
+            "text-slate-400",
+            "hover:text-slate-50",
+            "transition-colors",
+            "duration-150",
+            "active:scale-95"
+          ],
+          "icon": "settings",
+          "action": "click-action"
+        },
+        {
+          "label": "add_circle\n+1 Artır\nArrowUp",
+          "classes": [
+            "flex-1",
+            "bg-primary-container",
+            "group",
+            "relative",
+            "overflow-hidden",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "rounded-[2rem]",
+            "p-8",
+            "transition-all",
+            "duration-300",
+            "hover:scale-[1.02]",
+            "active:scale-95"
+          ],
+          "icon": "add_circle",
+          "action": "create"
+        },
+        {
+          "label": "remove_circle\n-1 Azalt\nArrowDown",
+          "classes": [
+            "flex-1",
+            "bg-secondary-container",
+            "group",
+            "relative",
+            "overflow-hidden",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "rounded-[2rem]",
+            "p-8",
+            "transition-all",
+            "duration-300",
+            "hover:scale-[1.02]",
+            "active:scale-95"
+          ],
+          "icon": "remove_circle",
+          "action": "click-action"
+        },
+        {
+          "label": "refresh\n                            Sıfırla",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-6",
+            "py-3",
+            "rounded-full",
+            "bg-surface-container-highest",
+            "text-on-tertiary-fixed-variant",
+            "font-bold",
+            "font-headline",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "group"
+          ],
+          "icon": "refresh",
+          "action": "click-action"
+        },
+        {
+          "label": "settings",
+          "classes": [
+            "w-14",
+            "h-14",
+            "rounded-full",
+            "bg-primary",
+            "shadow-lg",
+            "shadow-primary/20",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-primary",
+            "transition-transform",
+            "active:scale-90"
+          ],
+          "icon": "settings",
+          "action": "click-action"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "label": "numbers\nCounter",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "bg-emerald-500/10",
+            "text-emerald-400",
+            "rounded-lg",
+            "font-headline",
+            "font-medium",
+            "transition-all",
+            "duration-300",
+            "ease-in-out"
+          ],
+          "icon": "numbers"
+        },
+        {
+          "label": "bar_chart\nStats",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "hover:bg-slate-800/50",
+            "rounded-lg",
+            "font-headline",
+            "font-medium",
+            "transition-all",
+            "duration-300",
+            "ease-in-out"
+          ],
+          "icon": "bar_chart"
+        },
+        {
+          "label": "settings\nSettings",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "hover:bg-slate-800/50",
+            "rounded-lg",
+            "font-headline",
+            "font-medium",
+            "transition-all",
+            "duration-300",
+            "ease-in-out"
+          ],
+          "icon": "settings"
+        },
+        {
+          "label": "keyboard\nKeyboard",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "hover:bg-slate-800/50",
+            "rounded-lg",
+            "font-headline",
+            "font-medium",
+            "transition-all",
+            "duration-300",
+            "ease-in-out"
+          ],
+          "icon": "keyboard"
+        },
+        {
+          "label": "help\nHelp",
+          "href": "#",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-3",
+            "px-4",
+            "py-3",
+            "text-slate-500",
+            "hover:text-slate-300",
+            "hover:bg-slate-800/50",
+            "rounded-lg",
+            "font-headline",
+            "font-medium",
+            "transition-all",
+            "duration-300",
+            "ease-in-out"
+          ],
+          "icon": "help"
+        },
+        {
+          "label": "numbers\nSayaç",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-emerald-400"
+          ],
+          "icon": "numbers"
+        },
+        {
+          "label": "bar_chart\nİstatistik",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-slate-500"
+          ],
+          "icon": "bar_chart"
+        },
+        {
+          "label": "history\nGeçmiş",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-slate-500"
+          ],
+          "icon": "history"
+        },
+        {
+          "label": "settings\nAyarlar",
+          "href": "#",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "gap-1",
+            "text-slate-500"
+          ],
+          "icon": "settings"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "numbers",
+        "bar_chart",
+        "settings",
+        "keyboard",
+        "help",
+        "history",
+        "add_circle",
+        "remove_circle",
+        "refresh"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAtsQCXirZiMo3ZTL-dBnbee8H9X7pPH6pdqoR2eMSRZVC39qS9r96ibocvI8lYOkW24VQVL0gVITFV9UO4iuHh0NarGCXMCuJ3URr6ntsdWR-WplJT3KX7ZF8O0v5gyNH-ATL7EOmHB87il86pCh",
+          "alt": "User profile avatar"
+        }
+      ],
+      "cssVars": {},
+      "fonts": [
+        "Space Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "tabBar": [
+        {
+          "label": "Counter",
+          "icon": "numbers",
+          "active": false
+        },
+        {
+          "label": "Stats",
+          "icon": "bar_chart",
+          "active": false
+        },
+        {
+          "label": "Settings",
+          "icon": "settings",
+          "active": false
+        },
+        {
+          "label": "Keyboard",
+          "icon": "keyboard",
+          "active": false
+        },
+        {
+          "label": "Sayaç",
+          "icon": "numbers",
+          "active": false
+        },
+        {
+          "label": "İstatistik",
+          "icon": "bar_chart",
+          "active": false
+        },
+        {
+          "label": "Geçmiş",
+          "icon": "history",
+          "active": false
+        },
+        {
+          "label": "Ayarlar",
+          "icon": "settings",
+          "active": false
+        }
+      ],
+      "title": "Ana Sayaç (42)"
+    },
+    "dc07776bd9b7431ebf241bbaf85c9b1a": {
+      "screenId": "dc07776bd9b7431ebf241bbaf85c9b1a",
+      "sections": [
+        {
+          "tag": "aside",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-screen",
+            "p-4",
+            "bg-[#070d1f]",
+            "w-64",
+            "border-r",
+            "border-slate-800/50",
+            "shadow-2xl"
+          ],
+          "childCount": 8
+        },
+        {
+          "tag": "main",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "relative",
+            "overflow-hidden",
+            "bg-surface-dim"
+          ],
+          "childCount": 27
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Upgrade to Pro",
+          "classes": [
+            "w-full",
+            "py-2",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded-lg",
+            "font-bold",
+            "text-sm",
+            "opacity-50",
+            "cursor-not-allowed"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "Yenile",
+          "classes": [
+            "text-xs",
+            "font-bold",
+            "uppercase",
+            "tracking-widest",
+            "text-secondary",
+            "hover:text-on-secondary-container",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "create"
+        },
+        {
+          "label": "Yardım Al",
+          "classes": [
+            "text-xs",
+            "font-bold",
+            "uppercase",
+            "tracking-widest",
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action"
+        },
+        {
+          "label": "remove",
+          "classes": [
+            "w-20",
+            "h-20",
+            "rounded-full",
+            "border-2",
+            "border-outline-variant",
+            "flex",
+            "items-center",
+            "justify-center",
+            "cursor-not-allowed"
+          ],
+          "icon": "remove",
+          "action": "click-action"
+        },
+        {
+          "label": "add",
+          "classes": [
+            "relative",
+            "w-32",
+            "h-32",
+            "rounded-full",
+            "bg-gradient-to-br",
+            "from-primary",
+            "to-primary-dim",
+            "shadow-xl",
+            "shadow-primary/20",
+            "flex",
+            "items-center",
+            "justify-center",
+            "cursor-not-allowed"
+          ],
+          "icon": "add",
+          "action": "create"
+        },
+        {
+          "label": "refresh",
+          "classes": [
+            "w-20",
+            "h-20",
+            "rounded-full",
+            "border-2",
+            "border-outline-variant",
+            "flex",
+            "items-center",
+            "justify-center",
+            "cursor-not-allowed"
+          ],
+          "icon": "refresh",
+          "action": "click-action"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "numbers",
+        "bar_chart",
+        "settings",
+        "keyboard",
+        "help",
+        "history",
+        "gpp_maybe",
+        "remove",
+        "add",
+        "refresh",
+        "speed",
+        "timer",
+        "trending_up"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAACPDPE1eWfm6FYDG5dNn4KqcIoZGIkjxL18AUMDXPgb5sdtBsPSRnpwMs1iSK49iYs_nMRyojdJpwH9Z_6-7DJfLHXJ5h7aleQQAKMIqZyZNXAwValIia-kaf5mNGkklId1W0r-swnWj3DQl12Z",
+          "alt": "User profile avatar"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDO8lUsae-DJMORaMGveKGER7GMJ7C2O0XnPFwE0PVGRvlZhPiKcwYJjChxE0QfOPC_NFqFfjO-1QRctJnoGWzivQoc1xIc_oRs7Jlg6rK2vyz1Qv2UAxB5iAGP2SnLmdS8YJ-lJ939Ox9wfBRTDK",
+          "alt": "subtle film grain texture for professional cinematic feel"
+        }
+      ],
+      "cssVars": {},
+      "fonts": [
+        "Space Grotesk",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "tabBar": [
+        {
+          "label": "Counter",
+          "icon": "numbers",
+          "active": false
+        },
+        {
+          "label": "Stats",
+          "icon": "bar_chart",
+          "active": false
+        },
+        {
+          "label": "Settings",
+          "icon": "settings",
+          "active": false
+        },
+        {
+          "label": "Keyboard",
+          "icon": "keyboard",
+          "active": false
+        }
+      ],
+      "title": "Hata Durumu"
+    }
+  }
+}
